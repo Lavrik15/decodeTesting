@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="window-1251">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
     <h1 id="container"></h1>
+    <form action="">
+        <fieldset>
+            <h2>конвертировать текст в base64 формат</h2>
+            <input id="input" type="text" placeholder="Ваше имя">
+            <button id="btn">конвертировать</button>
+            <h2 id="output"></h2>
+        </fieldset>
+    </form>
+    <p>сконвертированый тект нужно подставить в параметр <i>user_name</i><br>
+        https://lavrik15.github.io/decodeTesting/?user_name=<b>ВОТ_СЮДА</b></p>
 <script>
     window.onload = function() {
         var container = document.querySelector("#container");
         var paramUserNameValue  = getUrlParameter("user_name") || "0LjQvNGPINC/0L4g0YPQvNC+0LvRh9Cw0L3QuNGO";
         var userName = atou(paramUserNameValue);
+        var input = document.querySelector("#input");
+        var output = document.querySelector("#output");
 
-        container.innerHTML = "РџСЂРёРІРµС‚, " + userName;
+        container.innerHTML = "Привет, " + userName;
         
+        btn.addEventListener("click", function(e){
+            e.preventDefault();
+            
+            output.innerHTML = "";
+            output.innerHTML = utoa(input.value);
+        });
+
         function utoa(str) {
             return window.btoa(unescape(encodeURIComponent(str)));
         }
