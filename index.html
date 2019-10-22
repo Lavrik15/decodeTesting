@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="window-1251">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
@@ -10,14 +10,14 @@
     <h1 id="container"></h1>
     <form action="">
         <fieldset>
-            <h2>конвертировать текст в base64 формат</h2>
-            <input id="input" type="text" placeholder="Ваше имя">
-            <button id="btn">конвертировать</button>
+            <h2>РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ С‚РµРєСЃС‚ РІ base64 С„РѕСЂРјР°С‚</h2>
+            <input id="input" type="text" placeholder="Р’Р°С€Рµ РёРјСЏ">
+            <button id="btn">РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ</button>
             <h2 id="output"></h2>
         </fieldset>
     </form>
-    <p>сконвертированый тект нужно подставить в параметр <i>user_name</i><br>
-        https://lavrik15.github.io/decodeTesting/?user_name=<b>ВОТ_СЮДА</b></p>
+    <p>СЃРєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅС‹Р№ С‚РµРєС‚ РЅСѓР¶РЅРѕ РїРѕРґСЃС‚Р°РІРёС‚СЊ РІ РїР°СЂР°РјРµС‚СЂ <i>user_name</i><br>
+        https://lavrik15.github.io/decodeTesting/?user_name=<b>Р’РћРў_РЎР®Р”Рђ</b></p>
 <script>
     window.onload = function() {
         var container = document.querySelector("#container");
@@ -26,7 +26,7 @@
         var input = document.querySelector("#input");
         var output = document.querySelector("#output");
 
-        container.innerHTML = "Привет, " + userName;
+        container.innerHTML = "РџСЂРёРІРµС‚, " + userName;
         
         btn.addEventListener("click", function(e){
             e.preventDefault();
