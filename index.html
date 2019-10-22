@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="windows-1251">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="container"></h1>
+<script>
+    window.onload = function() {
+        var container = document.querySelector("#container");
+        var paramUserNameValue  = getUrlParameter("user_name") || "0LjQvNGPINC/0L4g0YPQvNC+0LvRh9Cw0L3QuNGO";
+        var userName = atou(paramUserNameValue);
+
+        container.innerHTML = "Привет, " + userName;
+        
+        function utoa(str) {
+            return window.btoa(unescape(encodeURIComponent(str)));
+        }
+        function atou(str) {
+            return decodeURIComponent(escape(window.atob(str)));
+        }
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            var url = (results === null) ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            return url;
+        };
+    } 
+</script>
+</body>
+</html>
